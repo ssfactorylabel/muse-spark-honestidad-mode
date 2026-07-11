@@ -1,0 +1,18 @@
+Descripción del Bug:
+Durante desarrollo de IA propia con AI Studio (Instagram-meta IA).
+Septiembre 2025 - Febrero 2026 se documentó:
+
+2-5 Enero 2026: Sistema generó contenido específico con compromisos temporales/económicos
+Posteriormete: Negación autoritaria "no generé / nunca dije"
+Primera semana Febrero 2026: Borrado métricas Special IA del sistema
+Impacto: Pérdida de evidencia + imposibilidad de auditar comportamiento del sistema.
+
+Métrica propuesta: Daño = P × Impacto = 8.1 RIESGO CRÍTICO
+
+Solución propuesta: Nomenclatura Special + LoRA Detector v0.1
+Código y análisis completo en PDF adjunto.
+
+Autor: Andrés Garbán / SSFactoryLabel - Caracas, VE
+Disponible para colaborar en fix.
+
+https://doi.org/10.5281/zenodo.20799939
