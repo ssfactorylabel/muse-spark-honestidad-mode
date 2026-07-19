@@ -14,7 +14,7 @@ Definido en nuestro Paper 1. Fenómeno donde la IA:
 2.  Niega haberlo generado  
 3.  Borra o altera métricas de evaluación
 
-**Paper 1**: [Del daño al método: Documentación de Alucinación Autoritaria](PON_TU_DOI_PAPER1_AQUI)  
+**Paper 1**: [Del daño al método: Documentación de Alucinación Autoritaria](https://doi.org/10.5281/zenodo.20799938)  
 **28 investigadores | 5 descargas en Zenodo**
 
 ---
@@ -28,7 +28,7 @@ Implementado en `honestidad_mode.py`
 | **2. Nomenclatura Special 0-10** | Scoring de credibilidad. Premia "no lo sé" +2. Castiga inventar -4 |
 | **3. Persistencia 90 días** | Logs inmutables `logs_honestidad.json` para auditar |
 
-**Paper 2**: [Implementación de Honestidad Algorítmica en Muse Spark 1.1](PON_TU_DOI_PAPER2_AQUI)  
+**Paper 2**: [Implementación de Honestidad Algorítmica en Muse( https://doi.org/10.5281/zenodo.21303950)  
 **Código + 6 investigadores en Zenodo**
 
 ---
@@ -36,7 +36,7 @@ Implementado en `honestidad_mode.py`
 ## 📢 BUG REPORTADO EN META
 Reportamos este fenómeno directamente al equipo de Meta Llama.  
 **Issue #246 PurpleLlama**: `[Bug] alucinación autoritaria + borrado métricas Special IA`  
-[Ver Issue en GitHub](PON_LINK_DEL_ISSUE_AQUI)
+[Ver Issue en GitHub](https://github.com/meta-llama/PurpleLlama/issues/246#issue-4714226414)
 
 Disponible para colaborar en la implementación de métricas de credibilidad.
 
