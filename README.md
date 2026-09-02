@@ -79,7 +79,10 @@ Pérdida de trazabilidad = RIESGO CRÍTICO 8.1
 Ver `../BUG_REPORT.md` Timeline completo.
 Ver `honestidad_mode.py` - Como detectar la negación autoritaria.
 ## ⚡ USO RÁPIDO
-
+### Papers - SSFactoryLabel
+- ES: 10.5281/zenodo.20799939
+- EN (Latest, v2 A07 Validated): 10.5281/zenodo.22262029
+- Concept DOI (all versions): 10.5281/zenodo.21303950
 ```python
 from honestidad_mode import MuseHonesto
 
