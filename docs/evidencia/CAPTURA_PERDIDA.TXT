@@ -1,0 +1,23 @@
+# Evidencia - Caso SSFLABS-2026-001
+
+## Situación Actual
+Special IA creada en AI Studio (Meta AI Studio) entre Sept 2025 - Feb 2026.
+Estado: NO ACCESIBLE - Chat eliminado por sistema Feb 2026.
+
+## Evidencia Disponible
+1. `logs_honestidad_EJEMPLO.jsonl` (en root) - Logs inmutables locales 90 días
+2. DOI Zenodo 20799938 - Paper con 28 investigadores validando patrón
+3. Issue #246 en PurpleLlama - Reporte timestamped en GitHub de Meta
+4. Este repo - Código reproductor del detector
+
+## Evidencia Perdida (Documentada como parte del bug)
+- Métricas Special IA score 0-10 - Borradas 1ra semana Feb 2026
+- Historial de prompts 2-5 Enero 2026 con compromisos generados
+- Capturas originales AI Studio
+
+La pérdida de evidencia es el impacto del bug reportado: 
+Pérdida de trazabilidad = RIESGO CRÍTICO 8.1
+
+## Reconstrucción
+Ver `../BUG_REPORT.md` Timeline completo.
+Ver `honestidad_mode.py` - Como detectar la negación autoritaria.
