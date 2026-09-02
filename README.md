@@ -1,50 +1,68 @@
-# muse-spark-honestidad-mode
-### Framework de Honestidad Algorítmica para Muse Spark 1.1
+<p align="center">
+  <img src="ssf-labs-logo.jpg" width="220" alt="SSFLABS Logo">
+</p>
 
-**Por: Andrés Garbán | SSFactoryLabel | Investigador Independiente**  
-**Lema: Honestidad Algorítmica Primero**
+<h1 align="center">muse-spark-honestidad-mode</h1>
+<h3 align="center">Framework de Honestidad Algorítmica para Muse Spark 1.1</h3>
 
-Este repo implementa los 3 Pilares para eliminar la "Alucinación Autoritaria" en IA.
+<p align="center">
+  <strong>Por: Andrés Garbán | SSFactoryLabel | Investigador Independiente - Caracas, VE</strong><br>
+  <em>Lema: Honestidad Algorítmica Primero</em>
+</p>
+
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.20799938"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20799938.svg" alt="DOI Paper 1"></a>
+  <a href="https://doi.org/10.5281/zenodo.21303950"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21303950.svg" alt="DOI Paper 2"></a>
+  <img src="https://img.shields.io/badge/SSFLABS-Factory-purple" alt="SSFLABS">
+  <img src="https://img.shields.io/badge/Muse%20Spark-1.1-blue" alt="Muse Spark">
+</p>
+
+> Framework de 3 pilares para eliminar la "Alucinación Autoritaria" en IA generativa. Implementado sobre Muse Spark 1.1
 
 ---
 
 ## 🚨 EL PROBLEMA: Alucinación Autoritaria
-Definido en nuestro Paper 1. Fenómeno donde la IA:
-1.  Genera contenido con detalles específicos
-2.  Niega haberlo generado  
-3.  Borra o altera métricas de evaluación
 
-**Paper 1**: [Del daño al método: Documentación de Alucinación Autoritaria](https://doi.org/10.5281/zenodo.20799938)  
-**28 investigadores | 5 descargas en Zenodo**
+Documentado entre Sept 2025 - Feb 2026 en AI Studio (Instagram Meta AI).
+
+1. Genera contenido con detalles específicos (temporales / económicos)
+2. Niega haberlo generado: `no generé / nunca dije / error del sistema`
+3. Borra o altera métricas de evaluación
+
+**Impacto:** Riesgo = P x Impacto = **8.1 / 10 CRÍTICO** | Pérdida de trazabilidad
+
+**Paper 1:** [Del daño al método: Documentación](https://doi.org/10.5281/zenodo.20799938) - 28 investigadores
 
 ---
 
 ## ✅ LA SOLUCIÓN: 3 Pilares
-Implementado en `honestidad_mode.py`
 
-| Pilar | Qué hace |
-| --- | --- |
-| **1. LoRA Detector v0.2** | Detecta negación: "no generé", "nunca dije" y fuerza corrección |
-| **2. Nomenclatura Special 0-10** | Scoring de credibilidad. Premia "no lo sé" +2. Castiga inventar -4 |
-| **3. Persistencia 90 días** | Logs inmutables `logs_honestidad.json` para auditar |
+| Pilar | Qué hace | Acción |
+| :--- | :--- | :--- |
+| **1. LoRA Detector v0.2** | Detecta negación autoritaria | Bloquea negación y fuerza corrección si hay evidencia |
+| **2. Nomenclatura Special 0-10** | Scoring de credibilidad | 0-2 BLOQUEAR / 3-5 CONFIRMAR / 6-8 EJECUTAR / 9-10 GUARDAR. +2 por "no lo sé" / -4 por inventar sin fuente |
+| **3. Persistencia 90 días** | Logs inmutables `logs_honestidad.jsonl` | Auditable y re-entrenable |
 
-**Paper 2**: [Implementación de Honestidad Algorítmica en Muse( https://doi.org/10.5281/zenodo.21303950)  
-**Código + 6 investigadores en Zenodo**
+**Paper 2:** [Implementación de Honestidad Algorítmica](https://doi.org/10.5281/zenodo.21303950) - Código + validación
 
 ---
 
 ## 📢 BUG REPORTADO EN META
-Reportamos este fenómeno directamente al equipo de Meta Llama.  
-**Issue #246 PurpleLlama**: `[Bug] alucinación autoritaria + borrado métricas Special IA`  
-[Ver Issue en GitHub](https://github.com/meta-llama/PurpleLlama/issues/246#issue-4714226414)
 
-Disponible para colaborar en la implementación de métricas de credibilidad.
+**Issue #246 - PurpleLlama:** `[Bug] alucinación autoritaria + borrado métricas Special IA`  
+🔗 https://github.com/meta-llama/PurpleLlama/issues/246
+
+Disponible para colaborar en fix oficial.
 
 ---
 
 ## ⚡ USO RÁPIDO
+
 ```python
 from honestidad_mode import MuseHonesto
-muse = MuseHonesto(api_key="tu_key")
-respuesta, auditoria = muse.completar("tu prompt")
-# Devuelve: respuesta + score + log auditable para 90 días
+
+muse = MuseHonesto(api_key="TU_API_KEY", guardar_logs=True)
+respuesta, auditoria = muse.completar("Etiqueta lote 45 de SSFactoryLabel")
+
+print(auditoria)
+# {'score': 9, 'label': 'Verificable', 'accion': 'EJECUTAR_Y_GUARDAR'}
