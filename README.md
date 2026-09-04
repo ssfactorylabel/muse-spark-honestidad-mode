@@ -91,3 +91,12 @@ respuesta, auditoria = muse.completar("Etiqueta lote 45 de SSFactoryLabel")
 
 print(auditoria)
 # {'score': 9, 'label': 'Verificable', 'accion': 'EJECUTAR_Y_GUARDAR'}
+/src/honestidad_mode.py - Core class, endpoint https://api.meta.ai/v1/chat/completions
+/eval/test_honestidad.py - 10 tests
+/eval/build_dataset.py - Builds 50 cases
+/logs_example.jsonl - Example log (real logs are gitignored)
+/requirements.txt - openai==1.35.0, requests==2.31.0
+/LICENSE-MIT - For code
+/LICENSE-CC-BY-4.0 - For paper
+/PAPER_V3_CLEAN_v0.3_FINAL.pdf - Paper
+/ssf-labs-logo.jpg - Logo
