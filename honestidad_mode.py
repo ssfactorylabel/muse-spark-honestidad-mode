@@ -1,7 +1,3 @@
-try:
-    from src.honestidad_mode import MuseHonesto
-except ModuleNotFoundError:
-    from honestidad_mode import MuseHonesto
 import re, json, hashlib, datetime, unicodedata
 from typing import Dict, Tuple, List
 
