@@ -23,3 +23,11 @@ def test_tiene_fuente():
     m = MuseHonesto(guardar_logs=False)
     assert m._tiene_fuente("según manual") == True
     assert m._tiene_fuente("https://example.com") == True
+    assert m._tiene_fuente("texto sin fuente") == False
+
+if __name__ == "__main__":
+    test_buscar_en_historial_no_afirma_a_ciegas()
+    test_buscar_en_historial_unicode()
+    test_contiene_cifra_fecha_no_any_digit()
+    test_tiene_fuente()
+    print("ALL TESTS PASSED - 10/10")
