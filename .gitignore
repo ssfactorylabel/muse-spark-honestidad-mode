@@ -1,25 +1,20 @@
-# SSFLABS Factory - Minimal
+# Logs - nunca subir logs reales (solo logs_example.jsonl)
+logs_honestidad.jsonl
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 .venv/
 venv/
 env/
 
-# Logs - guardamos 1 ejemplo, ignoramos el resto local
-logs_honestidad.jsonl
-*.log
+# Secrets
+.env
+*.key
+*.token
 
-# Sistema
+# OS
 .DS_Store
 Thumbs.db
-
-# Editor temporal
-tempCodeRunnerFile.py
-.vscode/
-.idea/
-
-# Env keys - NUNCA subir API keys
-.env
