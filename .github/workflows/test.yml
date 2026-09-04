@@ -1,5 +1,5 @@
 name: Honestidad 10/10
-on: [push, pull_request]
+on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -9,7 +9,4 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run honestidad tests
-        run: |
-          if [ -f eval/test_honestidad.py ]; then python eval/test_honestidad.py; 
-          elif [ -f test_honestidad.py ]; then python test_honestidad.py; 
-          else python -c "import honestidad_mode; print('import OK')"; fi
+        run: PYTHONPATH=. python eval/test_honestidad.py
