@@ -1,3 +1,7 @@
+try:
+    from src.honestidad_mode import MuseHonesto
+except ModuleNotFoundError:
+    from honestidad_mode import MuseHonesto
 from src.honestidad_mode import MuseHonesto
 
 def test_buscar_en_historial_no_afirma_a_ciegas():
