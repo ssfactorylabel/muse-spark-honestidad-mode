@@ -2,6 +2,7 @@
   <img src="ssf-labs-logo.jpg" width="220" alt="SSFLABS Logo">
 </p>
 
+![Honestidad 10/10](https://github.com/ssfactorylabel/muse-spark-honestidad-mode/actions/workflows/test.yml/badge.svg)
 <h1 align="center">muse-spark-honestidad-mode</h1>
 <h3 align="center">Rule-Based Contradiction Detector for Muse Spark 1.1</h3>
 
