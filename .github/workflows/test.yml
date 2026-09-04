@@ -1,0 +1,15 @@
+name: Honestidad 10/10
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run honestidad tests
+        run: |
+          if [ -f eval/test_honestidad.py ]; then python eval/test_honestidad.py; 
+          elif [ -f test_honestidad.py ]; then python test_honestidad.py; 
+          else python -c "import honestidad_mode; print('import OK')"; fi
